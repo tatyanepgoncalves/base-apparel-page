@@ -1,5 +1,19 @@
 
-@media (width > 1024px) {
+@media (width < 767px) {
+  header {
+    position: static;
+    display: flex;
+    margin: 40px 30px;
+  }
+}
+
+@media (width >= 768px) and (width < 1023px) {
+  header {
+    margin: 40px 35px;
+  }
+}
+
+@media (width >= 1024px) {
   header {
     position: absolute;
     top: 40px;

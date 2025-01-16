@@ -13,7 +13,36 @@ body {
   overflow: hidden;
 }
 
-#app {
-  margin-left: 150px;
-  position: relative;
+@media (width < 767px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    overflow-x: hidden;
+  }
+
+  #app {
+    margin-left: 0;
+    
+  }
+}
+
+@media (width >= 768px) and (width < 1023px) {
+  body {
+    overflow: visible;
+  }
+  #app {
+    margin-left: 0;
+  }
+}
+
+@media (width >= 1024px) {
+
+  #app {
+    margin-left: 150px;
+    position: relative;
+    overflow: hidden;
+  }
+  
 }

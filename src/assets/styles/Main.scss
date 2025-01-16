@@ -3,7 +3,6 @@
 .text-form {
   display: flex;
   flex-direction: column;
-
   p {
     color: m.$PrimaryDesaturatedRed               ;
   }
@@ -26,7 +25,72 @@
   }
 }
 
-@media (width > 1024px) {
+@media (width < 767px) {
+  .image {
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      width: 100vw;
+    }
+  }
+
+  .text-form {
+    margin: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    p {
+      margin-top: 20px;
+      font-size: clamp(11px, 5vw, 15px);
+      line-height: 125%; 
+    }
+
+    .title {
+      h1, h2 {
+        font-size: 32px;
+        line-height: 140%;
+      }
+    }
+  }
+}
+
+@media (width >= 768px) and (width < 1023px) {
+  .image {
+    .mobile {
+      width: 100vw;
+    }
+    
+    .desktop {
+      display: none;
+    }
+  }
+
+  .text-form {
+    margin: 30px 35px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+
+    .title {
+      font-size: 35px;
+      line-height: 150%;
+      gap: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 140%;
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (width >= 1024px) {
   main {
     display: flex;
     flex-direction: row-reverse;
@@ -38,11 +102,17 @@
     .mobile {
       display: none;
     }
+
+    .desktop {
+      display: block;
+    }
   }
 
   .text-form {
     width: 50%;
     gap: 40px;
+    text-align: left;
+
     .text {
       width: 70%;
       p {
