@@ -20,6 +20,7 @@
   padding: 10px 23px;
   border-radius: 23px;
   border: none;
+  height: 100%;
   position: absolute;
   right: 0;
   top: 0;
@@ -29,6 +30,8 @@
 }
 
 .form-group {
+  position: relative;
+  
   &.error .form-input {
     border: 1.5px solid f.$PrimarySoftRed;
     outline: f.$PrimarySoftRed;
@@ -42,6 +45,7 @@
   &.error .error-message {
     color: f.$PrimarySoftRed;
     text-align: left;
+    position: absolute;
   }
 
   &.error .btn-submit {
