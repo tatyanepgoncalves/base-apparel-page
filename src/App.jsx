@@ -4,9 +4,9 @@ import "./App.scss";
 
 export default function App() {
   return (
-    <>
+    <div id="app">
       <Header />
       <Main />
-    </>
+    </div>
   )
 }
